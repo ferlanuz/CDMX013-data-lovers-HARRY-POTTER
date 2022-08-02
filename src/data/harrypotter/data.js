@@ -19,7 +19,7 @@ export default {
     {
       "id": 2,
       "name": "Stewart Ackerley",
-      "birth": "between 1 September 1982and 31 August 1983",
+      "birth": "between 1 September 1982 and 31 August 1983",
       "death": null,
       "species": "Human",
       "ancestry": null,
