@@ -1,0 +1,257 @@
+/** PROPIEDADES PERSONALIZADAS **/
+
+:root{
+    --fuentePrincipal: 'Lusitana', serif;
+    --fuenteSecundaria: 'Inter', sans-serif;
+
+    --vinoFondo: #630606;
+    --white: #F1F2F6;
+    --cardGryffindor: #E8424C;
+    --cardSlytherin: #16A085;
+    --cardRavenclaw: #227093;
+    --cardHufflepuff: #ECB233;
+    --cardOthers: #84817A;
+    --cardHuman: #A29BFE;
+}
+
+/** AJUSTES GENERALES DEL CONTENIDO **/
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: var(--vinoFondo);
+}
+
+/** HEADER **/
+
+.header-imgbg{
+    width: 100%;
+    height: 30rem;
+    margin-top: -1rem;
+}
+#img-header{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+@media (min-width: 1200px) {
+    .header-imgbg{
+        width: 100%;
+        height: 570px;
+        margin-top: -1rem;
+    }
+    #img-header{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+#img-logo{
+    max-width: 50%;
+    margin-left: 1rem;
+    margin-top: -4rem;
+}
+@media (min-width: 1200px) {
+    #img-logo{
+        max-width: 25%;
+        margin-left: 2rem;
+        margin-top: -6rem;
+    }
+}
+
+
+/** PERSONAJES **/
+
+aside{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+hr{
+    margin: 0 auto;
+    width: 15rem;
+}
+.charName{
+    color: var(--white);
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.alphabetic, .alphabeticReverse{
+    color: var(--white);
+    font-family: var(--fuenteSecundaria);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1200px) {
+    aside{
+        width: 30%;
+    }
+    hr{
+        margin-left: 10.5rem;
+        width: 15rem;
+    }
+    .charName{
+        font-size: 3.5rem;
+    }
+    .alphabetic, .alphabeticReverse{
+        font-size: 1.5rem;
+    }
+}
+
+
+/** MAIN - DISTRIBUCIÓN **/
+main{
+    display: flex;
+    flex-direction: column;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    main{
+        flex-direction: row;
+    }
+    section{
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin-top: -15rem;
+    }
+}
+
+/** TARJETAS **/
+
+#card{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.cardColors{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}
+.color-Red{
+    background-color: var(--cardGryffindor);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Blue{
+    background-color: var(--cardRavenclaw);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Green{
+    background-color: var(--cardSlytherin);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Yellow{
+    background-color: var(--cardHufflepuff);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Species{
+    background-color: var(--cardOthers);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Human{
+    background-color: var(--cardHuman);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.colorWhite{
+    background-color: var(--white);
+    width: 27rem;
+    height: 28rem;
+}
+.cardImg{
+    position: absolute;
+    z-index: 2;
+    width: auto;
+    align-self: center;
+    margin-top: 5rem;
+}
+.cardText{
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    width: 27rem;
+    margin-top: 13rem;
+}
+.title{
+    font-size: 2rem;
+}
+.textObj{
+    font-size: large;
+}
+
+@media (min-width: 1200px) {
+    .color-Red{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Blue{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Green{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Yellow{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Species{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Human{
+        width: 24rem;
+        height: 9rem;
+    }
+    .colorWhite{
+        width: 24rem;
+        height: 28rem;
+    }
+    .cardImg{
+        position: absolute;
+        z-index: 2;
+        width: auto;
+        align-self: center;
+        margin-top: 5rem;
+    }
+    .cardText{
+        position: absolute;
+        z-index: 3;
+        text-align: center;
+        width: 24rem;
+        margin-top: 13rem;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .textObj{
+        font-size: large;
+    }
+}
