@@ -173,3 +173,10 @@ function cleanSection () {
         section.removeChild(section.firstChild);
       }
 } 
+
+//MOSTRAR PERSONAJES COMO AL INICIO
+
+const selectionCharacters = document.querySelector('.charName');
+selectionCharacters.addEventListener('click', () => {
+location.reload();
+})
