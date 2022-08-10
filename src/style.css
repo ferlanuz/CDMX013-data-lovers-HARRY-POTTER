@@ -95,13 +95,17 @@ aside{
 
 @media (min-width: 768px) {
     aside{
-        width: 30%;
-        background-color: #FFFFFF;
-        opacity: .2;
-        margin-left: 8rem;
-        margin-right: 8rem;
+        width: 35%;
+        background: rgba(255, 255, 255, 0.39);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.47);    
+        margin-left: 7rem;
+        margin-right: 7rem;
         height: 27rem;
-        border-radius: 1.6rem;
+        border-radius: 2rem;
         
         z-index: 2;
     }
@@ -109,6 +113,7 @@ aside{
         height: 4rem;
         width: 4rem;
         margin-right: 2rem;
+        margin-left: 2rem;
     }
     .container-char-logo{
         display: flex;
@@ -119,7 +124,7 @@ aside{
     .charName{
         font-size: 3rem;
         font-family: var(--fuenteSecundaria);
-        z-index: 1;
+        margin-right: 2rem;
     }
     .alphabetic, .alphabeticReverse{
         font-size: 1.5rem;
@@ -302,7 +307,7 @@ section{
 .alphabetic:hover, .alphabeticReverse:hover{
   color: var(--cardHufflepuff);
   outline-color: rgba(71, 126, 232, 0);
-  outline-offset: 4rem;
+  outline-offset: 3rem;
 }
 
 
@@ -315,10 +320,21 @@ section{
 }
 
 #card:hover{
-  -webkit-transform:scale(1.1);transform:scale(1.1);
+  -webkit-transform: scale(1.1);transform:scale(1.1);
   border-radius: 2rem;
 
 }
+
+/* FONDO ANIMADO PARTICULAS */
+
+#particles-js{ 
+    position:absolute; 
+    width: 100%; 
+    height: 100%;
+     background-color: #232741; 
+     border-top: 0;
+}
+
 
 
 
