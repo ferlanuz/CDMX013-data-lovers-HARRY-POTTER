@@ -89,12 +89,30 @@ function generateCard(name, birth, species, house) {
       cardSpecies.classList.add('color-Species');
       const colorWhite = document.createElement('canvas');
       colorWhite.classList.add('colorWhite');
+    
+    //Imagenes de las casas
+    const imgGryffindor = document.createElement('img');
+      imgGryffindor.classList.add('cardImg');
+      imgGryffindor.src = "./img/Gryffindor_escudo.png";
+      imgGryffindor.alt = 'Gryffindor__escudo';
+    const imgSlytherin = document.createElement('img');
+      imgSlytherin.classList.add('cardImg');
+      imgSlytherin.src = "./img/Slytherin__escudo.png";
+      imgSlytherin.alt = 'Slytherin__escudo';
+    const imgRavenclaw = document.createElement('img');
+      imgRavenclaw.classList.add('cardImg');
+      imgRavenclaw.src = "./img/Ravenclaw_escudo.png";
+      imgRavenclaw.alt = 'Ravenclaw__escudo';
+    const imgHufflepuff = document.createElement('img');
+      imgHufflepuff.classList.add('cardImg');
+      imgHufflepuff.src = "./img/Hufflepuff_escudo.png";
+      imgHufflepuff.alt = 'Hufflepuff__escudo';
+    const imgOthers = document.createElement('img');
+      imgOthers.classList.add('cardImgOthers');
+      imgOthers.src = "./img/magic-wand 1varita.png";
+      imgOthers.alt = 'wand';
 
-    const imgWand = document.createElement('img');
-    imgWand.classList.add('cardImg');
-    imgWand.src = "./img/magic-wand 1varita.png";
-    imgWand.alt = 'wand';
-
+    //Elementos con el texto
     const cardText = document.createElement('cardText');
     cardText.classList.add('cardText');
 
@@ -112,38 +130,44 @@ function generateCard(name, birth, species, house) {
     
     //IF para remplazar el texto null de la data
     if(birth === null) {
-        textBirth.innerHTML = 'Nacimiento: Desconocido';
+        textBirth.innerHTML = 'Birth: Unknown';
     }else{
-        textBirth.innerHTML = 'Nacimiento: '+ birth;
+        textBirth.innerHTML = 'Birth: '+ birth;
     }
 
     if(house === null) {
-        textHouse.innerHTML = 'Casa: Desconocido';
+        textHouse.innerHTML = 'House: Unknown';
     }else{
-        textHouse.innerHTML = 'Casa: '+house;
+        textHouse.innerHTML = 'House: '+house;
     }
 
     if(species === null) {
-        textSpecies.innerHTML = 'Tipo: Desconocido'
+        textSpecies.innerHTML = 'Species: Unknown'
     }else {
-        textSpecies.innerHTML = 'Tipo: '+species;
+        textSpecies.innerHTML = 'Species: '+species;
     }
 
 
     //ponemos los elementos agrupados de colores y texto
         //IF para personalizar los colores de acuerdo a las casas o especie
-    if(house === 'Gryffindor') {
+    if(house === 'Gryffindor' || house === 'Gryffindor (likely)' || house === 'Gryffindor (possibly)') {
         cardColors.appendChild(cardGryffindor);
-    }else if(house === 'Slytherin') {
+        fatherCards.appendChild(imgGryffindor);
+    }else if(house === 'Slytherin' || house === 'Slytherin (likely)' || house === 'Slytherin (possibly)') {
         cardColors.appendChild(cardSlytherin);
-    }else if(house === 'Ravenclaw') {
+        fatherCards.appendChild(imgSlytherin);
+    }else if(house === 'Ravenclaw' || house === 'Ravenclaw (likely)' || house === 'Ravenclaw (possibly)') {
         cardColors.appendChild(cardRavenclaw);
-    }else if(house === 'Hufflepuff') {
+        fatherCards.appendChild(imgRavenclaw);
+    }else if(house === 'Hufflepuff' || house === 'Hufflepuff (likely)' || house === 'Hufflepuff (possibly)') {
         cardColors.appendChild(cardHufflepuff);
+        fatherCards.appendChild(imgHufflepuff);
     }else if(species === 'Human') {
         cardColors.appendChild(cardHuman);
+        fatherCards.appendChild(imgOthers);
     }else if(species !== 'Human' ) {
         cardColors.appendChild(cardSpecies);
+        fatherCards.appendChild(imgOthers);
     }
     
     cardColors.appendChild(colorWhite);
@@ -155,7 +179,6 @@ function generateCard(name, birth, species, house) {
     
     //poner los elementos dentro del div padre
     fatherCards.appendChild(cardColors);
-    fatherCards.appendChild(imgWand);
     fatherCards.appendChild(cardText);
 
     //Insertamos ya todo dentro del HTML SECTION
@@ -180,6 +203,7 @@ const selectionCharacters = document.querySelector('.charName');
 selectionCharacters.addEventListener('click', () => {
 location.reload();
 })
+
 
 
 
