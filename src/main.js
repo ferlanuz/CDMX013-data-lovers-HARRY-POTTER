@@ -109,8 +109,12 @@ function generateCard(name, birth, species, house) {
       imgHufflepuff.alt = 'Hufflepuff__escudo';
     const imgOthers = document.createElement('img');
       imgOthers.classList.add('cardImgOthers');
-      imgOthers.src = "./img/magic-wand 1varita.png";
-      imgOthers.alt = 'wand';
+      imgOthers.src = "./img/book.png";
+      imgOthers.alt = 'book_harry';
+    const imgAnimals = document.createElement('img');
+      imgAnimals.classList.add('cardImg');
+      imgAnimals.src = "./img/animals_fantastic1.png";
+      imgAnimals.alt = 'animals_fantastic';
 
     //Elementos con el texto
     const cardText = document.createElement('cardText');
@@ -167,7 +171,7 @@ function generateCard(name, birth, species, house) {
         fatherCards.appendChild(imgOthers);
     }else if(species !== 'Human' ) {
         cardColors.appendChild(cardSpecies);
-        fatherCards.appendChild(imgOthers);
+        fatherCards.appendChild(imgAnimals);
     }
     
     cardColors.appendChild(colorWhite);
