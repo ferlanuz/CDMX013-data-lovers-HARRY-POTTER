@@ -225,8 +225,8 @@ section{
 .cardImgOthers{
     position: absolute;
     z-index: 3;
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 12rem;
     align-self: center;
     margin-top: 5rem;
     margin-left: -1rem;
@@ -285,7 +285,7 @@ section{
         position: absolute;
         z-index: 2;
         align-self: center;
-        margin-top: 5rem;
+        margin-top: 3rem;
         margin-left: 0;
     }
     .cardText{
