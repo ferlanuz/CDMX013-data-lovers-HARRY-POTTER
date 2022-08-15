@@ -1,10 +1,10 @@
 import data from "./data/harrypotter/data.js";
 import functions from "./funciones.js";
 
-let info = data.characters;
+const infoCharacters = data.characters;
 
 
-getData(info);
+getData(infoCharacters);
 
 //sacamos la información especifica para crear las tarjetas
 function getData(info) {
@@ -29,10 +29,10 @@ btnOrder.addEventListener('click', function (){
     cleanSection();
 
     //IMPRIMIENDO LA INFORMACIÓN EN EL DOM
-    for(let i=0 ; i< functions.sortOrder(info).length ; i++){
+    for(let i=0 ; i< functions.sortOrder(infoCharacters).length ; i++){
 
         //hacemos destructuring para la información
-        let {name, birth, species, house} = functions.sortOrder(info)[i];
+        let {name, birth, species, house} = functions.sortOrder(infoCharacters)[i];
         
         //Función que hace las tarjetas
         generateCard(name, birth, species, house);
@@ -49,14 +49,26 @@ btnOrderReverse.addEventListener('click', function (){
     cleanSection();
 
     //IMPRIMIENDO LA INFORMACIÓN EN EL DOM
-    for(let i=0 ; i< functions.sortOrderReverse(info).length ; i++){
+    for(let i=0 ; i< functions.sortOrderReverse(infoCharacters).length ; i++){
 
         //hacemos destructuring para la información
-        let {name, birth, species, house} = functions.sortOrderReverse(info)[i];
+        let {name, birth, species, house} = functions.sortOrderReverse(infoCharacters)[i];
 
         //Función que hace las tarjetas
         generateCard(name, birth, species, house);
     }
+})
+
+
+
+
+//EVENTO FILTRAR DATA
+document.querySelector('#filterButton').addEventListener('click', function () {
+    cleanSection();
+    let inputValueFilter = document.querySelector('#valueFilter').value;
+    let matchInfoResult = functions.filterNames(infoCharacters,inputValueFilter)[0];
+    let {name, birth, species, house} = matchInfoResult;
+    generateCard(name, birth, species, house);
 })
 
 
@@ -201,11 +213,16 @@ function cleanSection () {
       }
 } 
 
+
+
+
 //MOSTRAR PERSONAJES COMO AL INICIO
 
 const selectionCharacters = document.querySelector('.charName');
 selectionCharacters.addEventListener('click', () => {
-location.reload();
+    location.reload();
+    //cleanSection();
+    //getData(infoCharacters);
 })
 
 
