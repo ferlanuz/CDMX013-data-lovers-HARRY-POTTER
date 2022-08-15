@@ -95,7 +95,8 @@ aside{
 
 @media (min-width: 768px) {
     aside{
-        width: 35%;
+        max-width: 35%;
+        height: 30rem;
         background: rgba(255, 255, 255, 0.39);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -104,7 +105,6 @@ aside{
         border: 1px solid rgba(255, 255, 255, 0.47);    
         margin-left: 7rem;
         margin-right: 7rem;
-        height: 27rem;
         border-radius: 2rem;
         
         z-index: 2;
@@ -326,6 +326,22 @@ section{
   color: var(--cardHufflepuff);
   outline-color: rgba(71, 126, 232, 0);
   outline-offset: 3rem;
+}
+
+#valueFilter, #filterButton{
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border: none;
+    font-size: large;
+}
+#filterButton{
+    margin-top: 1rem;
+}
+#filterButton:hover{
+    background-color: var(--cardHufflepuff);
+    color: var(--white);
 }
 
 
