@@ -1,0 +1,378 @@
+/** PROPIEDADES PERSONALIZADAS **/
+
+:root{
+    --fuentePrincipal: 'Lusitana', serif;
+    --fuenteSecundaria: 'Inter', sans-serif;
+
+    --vinoFondo: #630606;
+    --white: #F1F2F6;
+    --cardGryffindor: #E8424C;
+    --cardSlytherin: #16A085;
+    --cardRavenclaw: #227093;
+    --cardHufflepuff: #ECB233;
+    --cardOthers: #84817A;
+    --cardHuman: #A29BFE;
+}
+
+/** AJUSTES GENERALES DEL CONTENIDO **/
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    background-color: #232741;
+    margin: 0;
+}
+
+/** HEADER **/
+
+.header-imgbg{
+    width: 100%;
+    height: 20rem;
+    margin-top: -1rem;
+}
+#img-header{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+@media (min-width: 768px) {
+    .header-imgbg{
+        width: 100%;
+        height: 35rem;
+        margin-top: -1rem;
+    }
+    #img-header{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+#img-logo{
+    max-width: 50%;
+    margin-left: 1rem;
+    margin-top: -4rem;
+}
+@media (min-width: 1200px) {
+    #img-logo{
+        max-width: 25%;
+        margin-left: 2rem;
+        margin-top: -6rem;
+    }
+}
+
+
+/** PERSONAJES **/
+
+aside{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.charName{
+    color: var(--white);
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.charName:hover{
+    text-decoration: underline;
+}
+.alphabetic, .alphabeticReverse{
+    color: var(--white);
+    font-family: var(--fuenteSecundaria);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+    aside{
+        max-width: 35%;
+        height: 35rem;
+        background: rgba(255, 255, 255, 0.39);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.47);    
+        margin-left: 7rem;
+        margin-right: 7rem;
+        border-radius: 2rem;
+        
+        z-index: 2;
+    }
+    .characterIcon{
+        height: 4rem;
+        width: 4rem;
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+    .container-char-logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .charName{
+        font-size: 3rem;
+        font-family: var(--fuenteSecundaria);
+        margin-right: 2rem;
+    }
+    .alphabetic, .alphabeticReverse{
+        font-size: 1.5rem;
+        
+        z-index: 1;
+    }
+}
+
+
+/** MAIN - DISTRIBUCIÓN **/
+main{
+    display: flex;
+    flex-direction: column;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+   
+   
+}
+@media (min-width: 768px) {
+    main{
+        flex-direction: row;
+    }
+    section{
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        margin-top: -8rem;
+        padding-left: 5rem;
+        margin-right: 0;
+    }
+}
+
+/** TARJETAS **/
+
+#card{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.cardColors{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    position: relative;
+}
+.color-Red{
+    background-color: var(--cardGryffindor);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Blue{
+    background-color: var(--cardRavenclaw);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Green{
+    background-color: var(--cardSlytherin);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Yellow{
+    background-color: var(--cardHufflepuff);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Species{
+    background-color: var(--cardOthers);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.color-Human{
+    background-color: var(--cardHuman);
+    width: 27rem;
+    height: 8rem;
+    border-radius: 2rem 2rem 0 0;
+}
+.colorWhite{
+    background-color: var(--white);
+    width: 27rem;
+    height: 28rem;
+}
+.cardImg{
+    position: absolute;
+    z-index: 2;
+    width: 14rem;
+    height: 14rem;
+    align-self: center;
+    margin-top: 2rem;
+    margin-left: -1rem;
+}
+.cardImgOthers{
+    position: absolute;
+    z-index: 3;
+    width: 10rem;
+    height: 12rem;
+    align-self: center;
+    margin-top: 5rem;
+    margin-left: -1rem;
+}
+.cardText{
+    position: absolute;
+    z-index: 4;
+    text-align: center;
+    width: 27rem;
+    margin-top: 13rem;
+}
+.title{
+    font-size: 2rem;
+}
+.textObj{
+    font-size: large;
+}
+
+@media (min-width: 1200px) {
+    .color-Red{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Blue{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Green{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Yellow{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Species{
+        width: 24rem;
+        height: 9rem;
+    }
+    .color-Human{
+        width: 24rem;
+        height: 9rem;
+    }
+    .colorWhite{
+        width: 24rem;
+        height: 28rem;
+    }
+    .cardImg{
+        position: absolute;
+        z-index: 2;
+        align-self: center;
+        margin-top: 1.8rem;
+        margin-left: 0;
+    }
+    .cardImgOthers{
+        position: absolute;
+        z-index: 2;
+        align-self: center;
+        margin-top: 3rem;
+        margin-left: 0;
+    }
+    .cardText{
+        position: absolute;
+        z-index: 3;
+        text-align: center;
+        width: 24rem;
+        margin-top: 13rem;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .textObj{
+        font-size: large;
+    }
+}
+
+/* ESTILO BOTONES Y HOVER */
+
+.alphabetic, .alphabeticReverse {
+    background-color: transparent;
+    border-radius: 2rem;
+    color:#F1F2F6;
+    font-size: 2rem;
+    outline: 2px solid;
+    outline-color: #F1F2F6;
+   
+    cursor: pointer;
+    
+    margin-bottom: 3rem;  
+    margin-left: 3rem;
+    margin-right: 3rem;
+    outline-offset: 1rem;
+    transition: all 700ms cubic-bezier(0.2, 0, 0, 0.8);
+  }
+
+.alphabetic:hover, .alphabeticReverse:hover{
+  color: var(--cardHufflepuff);
+  outline-color: rgba(71, 126, 232, 0);
+  outline-offset: 3rem;
+}
+
+#valueFilter, #filterButton{
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border: none;
+    font-size: large;
+}
+#filterButton{
+    margin-top: 1rem;
+}
+#filterButton:hover{
+    background-color: var(--cardHufflepuff);
+    color: var(--white);
+}
+
+
+
+/* HOVER TARJETAS */
+
+#card{
+  overflow:hidden;
+  transition: all .2s ease-in-out;
+}
+
+#card:hover{
+  -webkit-transform: scale(1.1);transform:scale(1.1);
+  border-radius: 2rem;
+
+}
+
+/* FONDO ANIMADO PARTICULAS */
+
+#particles-js{ 
+    position:absolute; 
+    width: 100%; 
+    height: 100%;
+     background-color: #232741; 
+     border-top: 0;
+}
+
+
+
+
+
+
+
+
