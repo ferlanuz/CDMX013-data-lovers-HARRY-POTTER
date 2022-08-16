@@ -8,15 +8,12 @@ getData(infoCharacters);
 
 //sacamos la información especifica para crear las tarjetas
 function getData(info) {
-
-    for(let i=0 ; i< info.length ; i++){
-
-        //hacemos destructuring para la información
-        let {name, birth, species, house} = info[i];
+    info.map( (character) => {
+        let {name, birth, species, house} = character;
 
         //Función que hace las tarjetas
         generateCard(name, birth, species, house);
-    }
+    })
 }
 
 
@@ -29,14 +26,14 @@ btnOrder.addEventListener('click', function (){
     cleanSection();
 
     //IMPRIMIENDO LA INFORMACIÓN EN EL DOM
-    for(let i=0 ; i< functions.sortOrder(infoCharacters).length ; i++){
-
-        //hacemos destructuring para la información
-        let {name, birth, species, house} = functions.sortOrder(infoCharacters)[i];
+    functions.sortOrder(infoCharacters).map( (character) => {
+         //hacemos destructuring para la información
+         let {name, birth, species, house} = character;
         
-        //Función que hace las tarjetas
-        generateCard(name, birth, species, house);
-    }  
+         //Función que hace las tarjetas
+         generateCard(name, birth, species, house);
+    });
+
 })
 
 
@@ -49,14 +46,14 @@ btnOrderReverse.addEventListener('click', function (){
     cleanSection();
 
     //IMPRIMIENDO LA INFORMACIÓN EN EL DOM
-    for(let i=0 ; i< functions.sortOrderReverse(infoCharacters).length ; i++){
-
+    functions.sortOrderReverse(infoCharacters).map( (character) => {
         //hacemos destructuring para la información
-        let {name, birth, species, house} = functions.sortOrderReverse(infoCharacters)[i];
-
+        let {name, birth, species, house} = character;
+       
         //Función que hace las tarjetas
         generateCard(name, birth, species, house);
-    }
+   });
+
 })
 
 
@@ -70,6 +67,11 @@ document.querySelector('#filterButton').addEventListener('click', function () {
     let {name, birth, species, house} = matchInfoResult;
     generateCard(name, birth, species, house);
 })
+
+
+
+
+//EVENTO REDUCE DATA (PRESENTAR PORCENTAJE DE MUJERES)
 
 
 
