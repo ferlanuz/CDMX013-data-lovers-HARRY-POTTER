@@ -96,7 +96,7 @@ aside{
 @media (min-width: 768px) {
     aside{
         max-width: 35%;
-        height: 30rem;
+        height: 35rem;
         background: rgba(255, 255, 255, 0.39);
         border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
