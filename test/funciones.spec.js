@@ -11,6 +11,16 @@ describe('functions.sortOrder', () => {
   });
 }); 
 
+describe('functions.sortOrderReverse', () => {
+  it('is a function', () => {
+    expect(typeof functions.sortOrderReverse).toBe('function');
+  });
+
+  it('returns "Zoo director, Zacharias Smith, Xenophilius Lovegood" for "Zacharias Smith, Xenophilius Lovegood, Zoo director"', () => {
+    expect(functions.sortOrderReverse([{name: "Zacharias Smith"}, {name: "Xenophilius Lovegood"}, {name: "Zoo director"}])).toStrictEqual([{name: "Zoo director"}, {name: "Zacharias Smith"}, {name: "Xenophilius Lovegood"}]);
+  });
+});
+
 describe('functions.filterNames', () => {
   it('is a function', () => {
     expect(typeof functions.filterNames).toBe('function');
