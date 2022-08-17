@@ -382,6 +382,105 @@ input{
     margin-right: 1rem;
 }
 
+@media (min-width: 768px){
+    /* SIDENAV */
+
+    #mySidenav p{
+        height: 5rem;
+        position: fixed;
+        left: -162px;
+        transition: 0.6s;
+        padding: 15px;
+        width: 210px;
+        text-decoration: none;
+        font-size: 2.5rem;
+        color: white;
+        border-radius: 0 5px 5px 0;
+    }
+
+    #mySidenav p:hover{
+        left: 0;
+        cursor: pointer;
+        color: var(--white);
+        
+    }
+    .witch-icon{
+        height: 3rem;
+        width: 3rem;
+    }
+
+    #characters{
+        top: 20px;
+        background: rgba(255, 255, 255, 0.39);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.47); 
+        margin-left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: large;
+        padding-left: 5rem;
+    }
+    .sort-icon{
+        height: 3rem;
+        width: 3rem;
+    }
+    
+    #alphabetic{
+        top: 80px;
+        background: rgba(255, 255, 255, 0.39);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.47);
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+    }
+    
+    #alphabeticReverse{
+        top: 140px;
+        background: rgba(255, 255, 255, 0.39);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.47);  
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+    }
+
+    #search{
+        top: 200px;
+        background: rgba(255, 255, 255, 0.39);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.47); 
+        padding-left: 0; 
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .search-icon{
+        height: 3rem;
+        width: 3rem;
+
+    }
+
+    input::placeholder{
+        color: var(--white);
+    }
+    
+    input{
+        border-radius: 1rem;
+        border: solid var(--white);
+        background: transparent;
+        color: var(--white);
+        font-size: large;
+        width: 15rem;
+        margin-right: 1rem;
+    }
+}
 
 
 
