@@ -84,8 +84,7 @@ aside{
         border-radius: 16px;
         backdrop-filter: blur(1px);
         -webkit-backdrop-filter: blur(3px); 
-        padding-right: 30rem;
-        margin-right: 7rem;
+        padding-right: 22rem;
         border-radius: 2rem;
     }
     
@@ -100,7 +99,7 @@ main{
 section{
     display: flex;
     flex-direction: column;
-    max-width: 70%;
+    max-width: 80%;
    
    
 }
@@ -111,9 +110,8 @@ section{
     section{
         flex-flow: row wrap;
         justify-content: flex-start;
-        margin-top: -8rem;
-        padding-left: 2rem;
-        margin-right: 0;
+        margin-top: -2rem;
+      
     }
 }
 
@@ -390,7 +388,7 @@ input{
         position: fixed;
         left: -162px;
         transition: 0.6s;
-        padding: 15px;
+        padding: 10px;
         width: 210px;
         text-decoration: none;
         font-size: 2.5rem;
