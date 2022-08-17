@@ -60,12 +60,15 @@ btnOrderReverse.addEventListener('click', function (){
 
 
 //EVENTO FILTRAR DATA
-document.querySelector('#filterButton').addEventListener('click', function () {
-    cleanSection();
-    let inputValueFilter = document.querySelector('#valueFilter').value;
-    let matchInfoResult = functions.filterNames(infoCharacters,inputValueFilter)[0];
-    let {name, birth, species, house} = matchInfoResult;
-    generateCard(name, birth, species, house);
+document.querySelector('#valueFilter').addEventListener('keyup', function (event) {
+    if(event.code === 'Enter'){
+        cleanSection();
+     let inputValueFilter = document.querySelector('#valueFilter').value;
+     let matchInfoResult = functions.filterNames(infoCharacters,inputValueFilter)[0];
+     let {name, birth, species, house} = matchInfoResult;
+     generateCard(name, birth, species, house);
+    }
+    
 })
 
 
