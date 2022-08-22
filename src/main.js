@@ -74,6 +74,7 @@ document.querySelector('#valueFilter').addEventListener('keyup', function (event
 
 
 
+<<<<<<< HEAD
 //EVENTO REDUCE DATA (PRESENTAR PORCENTAJE DE PERSONAJES POR CASAS)
 ejemplo();
 
@@ -104,6 +105,8 @@ function ejemplo() {
 
 
 
+=======
+>>>>>>> de6893b (borrando datos de la rama ALE)
 
 
 
