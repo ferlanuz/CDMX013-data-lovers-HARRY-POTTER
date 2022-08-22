@@ -73,8 +73,6 @@ document.querySelector('#valueFilter').addEventListener('keyup', function (event
 
 
 
-
-<<<<<<< HEAD
 //EVENTO REDUCE DATA (PRESENTAR PORCENTAJE DE PERSONAJES POR CASAS)
 ejemplo();
 
@@ -102,12 +100,6 @@ function ejemplo() {
     console.log(porcentGryffindor, porcentSlytherin, porcentRavenclaw, porcentHufflepuff)
 
 }
-
-
-
-=======
->>>>>>> de6893b (borrando datos de la rama ALE)
-
 
 
 

@@ -23,7 +23,6 @@ const functions = {
         return false
       }
     })
-<<<<<<< HEAD
   },
 
   //Función de contar por casas REDUCE
@@ -36,8 +35,6 @@ const functions = {
       }
       return acum;
     }, [])
-=======
->>>>>>> de6893b (borrando datos de la rama ALE)
   }
 }
 
