@@ -4,7 +4,7 @@ import functions from "./funciones.js";
 const infoCharacters = data.characters;
 
 
-getData(infoCharacters);
+//getData(infoCharacters);
 
 //sacamos la información especifica para crear las tarjetas
 function getData(info) {
@@ -74,7 +74,36 @@ document.querySelector('#valueFilter').addEventListener('keyup', function (event
 
 
 
-//EVENTO REDUCE DATA (PRESENTAR PORCENTAJE DE MUJERES)
+//EVENTO REDUCE DATA (PRESENTAR PORCENTAJE DE PERSONAJES POR CASAS)
+ejemplo();
+
+function ejemplo() {
+    const houses = infoCharacters.map( (character) => {
+        return character.house;
+    })
+
+    const resultReduce = functions.reduceHouses(houses);
+
+    console.table(resultReduce);
+    const totalGryffindor = resultReduce['Gryffindor'] + resultReduce['Gryffindor (possibly)'] + resultReduce['Gryffindor (likely)'];
+    const porcentGryffindor = ((100 * totalGryffindor) / 707).toFixed(2);
+
+    const totalSlytherin = resultReduce['Slytherin'] + resultReduce['Slytherin (possibly)'] + resultReduce['Slytherin (likely)'] + resultReduce['Slytherin (most likely)'];
+    const porcentSlytherin = ((100 * totalSlytherin) / 707).toFixed(2);
+
+    const totalRavenclaw = resultReduce['Ravenclaw'] + resultReduce['Ravenclaw (possibly)'] + resultReduce['Ravenclaw (likely)'];
+    const porcentRavenclaw = ((100 * totalRavenclaw) / 707).toFixed(2);
+    
+    const totalHufflepuff = resultReduce['Hufflepuff'] + resultReduce['Hufflepuff (possibly)'] + resultReduce['Hufflepuff (likely)'];
+    const porcentHufflepuff = ((100 * totalHufflepuff) / 707).toFixed(2);
+
+    console.log(totalGryffindor, totalSlytherin, totalRavenclaw, totalHufflepuff)
+    console.log(porcentGryffindor, porcentSlytherin, porcentRavenclaw, porcentHufflepuff)
+
+}
+
+
+
 
 
 
