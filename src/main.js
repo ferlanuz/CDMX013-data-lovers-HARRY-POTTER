@@ -101,6 +101,9 @@ function ejemplo() {
 
 }
 
+//EVENTO HACER CALCULO E IMPRIMIR DATA EN EL DOM
+
+
 
 
 //GENERADOR DE TARJETAS

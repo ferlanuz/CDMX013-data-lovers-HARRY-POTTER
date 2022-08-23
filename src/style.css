@@ -403,7 +403,7 @@ input{
         color: var(--white);
         
     }
-    .witch-icon, .sort-icon, .search-icon{
+    .witch-icon, .sort-icon, .search-icon, .houses-icon{
         height: 4rem;
         width: 4rem;
     }
@@ -446,7 +446,7 @@ input{
     }
 
     #search{
-        top: 29rem;
+        top: 38rem;
         background: rgba(255, 255, 255, 0.39);
         backdrop-filter: blur(3px);
         -webkit-backdrop-filter: blur(3px);
@@ -469,6 +469,17 @@ input{
         font-size: large;
         width: 14rem;
         margin-right: 2rem;
+    }
+
+    #houses{
+        background: rgba(255, 255, 255, 0.39);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+        border: 1px solid rgba(255, 255, 255, 0.47);  
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        top: 29rem;
     }
 }
 
