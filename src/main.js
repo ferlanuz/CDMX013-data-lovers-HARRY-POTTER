@@ -74,16 +74,20 @@ document.querySelector('#valueFilter').addEventListener('keyup', function (event
 
 
 //EVENTO REDUCE DATA (PRESENTAR PORCENTAJE DE PERSONAJES POR CASAS)
-ejemplo();
+const btnHousesPorcent = document.querySelector('#houses');
+btnHousesPorcent.addEventListener('click', function () {
 
-function ejemplo() {
+    cleanSection();
+
+    //sacamos solo la información de las casas por cada personaje
     const houses = infoCharacters.map( (character) => {
         return character.house;
     })
 
+    //Sacamos un array que contiene cuantos personajes hay por cada casa
     const resultReduce = functions.reduceHouses(houses);
 
-    console.table(resultReduce);
+    //Calculamos el porcentaje de cada casa de acuerdo a los resultados anteriores
     const totalGryffindor = resultReduce['Gryffindor'] + resultReduce['Gryffindor (possibly)'] + resultReduce['Gryffindor (likely)'];
     const porcentGryffindor = ((100 * totalGryffindor) / 707).toFixed(2);
 
@@ -95,13 +99,102 @@ function ejemplo() {
     
     const totalHufflepuff = resultReduce['Hufflepuff'] + resultReduce['Hufflepuff (possibly)'] + resultReduce['Hufflepuff (likely)'];
     const porcentHufflepuff = ((100 * totalHufflepuff) / 707).toFixed(2);
+console.log(totalGryffindor, totalSlytherin, totalRavenclaw, totalHufflepuff)
+    //Creamos las tarjetas en el dom para imprimirlas
+    //Elegimos el elemento donde van a ser insertadas
+    const section = document.querySelector('section');
 
-    console.log(totalGryffindor, totalSlytherin, totalRavenclaw, totalHufflepuff)
-    console.log(porcentGryffindor, porcentSlytherin, porcentRavenclaw, porcentHufflepuff)
+    //creamos los elementos contenedores del frente
+    const articleDomHufflepuff = document.createElement('article');
+        articleDomHufflepuff.classList.add('hufflepuff-article');
+    const articleDomRavenclaw = document.createElement('article');
+        articleDomRavenclaw.classList.add('ravenclaw-article');
+    const articleDomGryffindor = document.createElement('article');
+        articleDomGryffindor.classList.add('gryffindor-article');
+    const articleDomSlytherin = document.createElement('article');
+        articleDomSlytherin.classList.add('slytherin-article');
 
-}
+    //Img de cada tarjeta
+    const imgDomHufflepuff = document.createElement('img');
+        imgDomHufflepuff.classList.add('houses');
+        imgDomHufflepuff.src = "./img/WOBBLY SHIKA (1).jpeg";
+        imgDomHufflepuff.alt = 'hufflepuff.jpeg'
+    const imgDomRavenclaw = document.createElement('img');
+        imgDomRavenclaw.classList.add('houses');
+        imgDomRavenclaw.src = "./img/_ (4).jpeg";
+        imgDomRavenclaw.alt = 'ravenclaw.jpeg';
+    const imgDomGryffindor = document.createElement('img');
+        imgDomGryffindor.classList.add('houses');
+        imgDomGryffindor.src = "./img/_ (5).jpeg";
+        imgDomGryffindor.alt = 'gryffindor.jpeg'
+    const imgDomSlytherin = document.createElement('img');
+        imgDomSlytherin.classList.add('houses');
+        imgDomSlytherin.src = "./img/WOBBLY SHIKA.jpeg";
+        imgDomSlytherin.alt = 'slytherin.jpeg'
 
-//EVENTO HACER CALCULO E IMPRIMIR DATA EN EL DOM
+    //Carta de color para el hover de cada una
+    const articleColorHufflepuff = document.createElement('article');
+        articleColorHufflepuff.classList.add('back-article-hufflepuff');
+    const articleColorRavenclaw = document.createElement('article');
+        articleColorRavenclaw.classList.add('back-article-ravenclaw');
+    const articleColorGryffindor = document.createElement('article');
+        articleColorGryffindor.classList.add('back-article-gryffindor');
+    const articleColorSlytherin = document.createElement('article');
+        articleColorSlytherin.classList.add('back-article-slytherin');
+
+    //donde va a ir el texto de los resultados
+    const textPorcentHufflepuff = document.createElement('h2');
+        textPorcentHufflepuff.classList.add('textPorcent');
+        textPorcentHufflepuff.innerText = porcentHufflepuff + '%';
+    const textPorcentRavenclaw = document.createElement('h2');
+        textPorcentRavenclaw.classList.add('textPorcent');
+        textPorcentRavenclaw.innerText = porcentRavenclaw + '%';
+    const textPorcentGryffindor = document.createElement('h2');
+        textPorcentGryffindor.classList.add('textPorcent');
+        textPorcentGryffindor.innerText = porcentGryffindor + '%';
+    const textPorcentSlytherin = document.createElement('h2');
+        textPorcentSlytherin.classList.add('textPorcent');
+        textPorcentSlytherin.innerText = porcentSlytherin + '%';
+
+    //Texto complementario para las tarjetas
+    const textAdictHufflepuff = document.createElement('p');
+        textAdictHufflepuff.classList.add('textAdict');
+        textAdictHufflepuff.innerText = `${totalHufflepuff} of the 707 characters belong to Hufflepuff`;
+    const textAdictRavenclaw = document.createElement('p');
+        textAdictRavenclaw.classList.add('textAdict');
+        textAdictRavenclaw.innerText = `${totalRavenclaw} of the 707 characters belong to Ravenclaw`;
+    const textAdictGryffindor = document.createElement('p');
+        textAdictGryffindor.classList.add('textAdict');
+        textAdictGryffindor.innerText = `${totalGryffindor} of the 707 characters belong to Gryffindor`;
+    const textAdictSlytherin = document.createElement('p');
+        textAdictSlytherin.classList.add('textAdict');
+        textAdictSlytherin.innerText = `${totalSlytherin} of the 707 characters belong to Slytherin`;
+
+    //Integramos todo al DOM
+    articleDomHufflepuff.appendChild(imgDomHufflepuff);
+    articleDomRavenclaw.appendChild(imgDomRavenclaw);
+    articleDomGryffindor.appendChild(imgDomGryffindor);
+    articleDomSlytherin.appendChild(imgDomSlytherin);
+
+    articleColorHufflepuff.appendChild(textPorcentHufflepuff);
+        articleColorHufflepuff.appendChild(textAdictHufflepuff);
+    articleColorRavenclaw.appendChild(textPorcentRavenclaw);
+        articleColorRavenclaw.appendChild(textAdictRavenclaw);
+    articleColorGryffindor.appendChild(textPorcentGryffindor);
+        articleColorGryffindor.appendChild(textAdictGryffindor);
+    articleColorSlytherin.appendChild(textPorcentSlytherin);
+        articleColorSlytherin.appendChild(textAdictSlytherin);
+
+    section.appendChild(articleDomHufflepuff);
+    section.appendChild(articleDomRavenclaw);
+    section.appendChild(articleDomGryffindor);
+    section.appendChild(articleDomSlytherin);
+    
+    section.appendChild(articleColorHufflepuff);
+    section.appendChild(articleColorRavenclaw);
+    section.appendChild(articleColorGryffindor);
+    section.appendChild(articleColorSlytherin);
+} )
 
 
 

@@ -634,6 +634,22 @@ input{
         background-color: var(--cardSlytherin);
         top: -71rem;
     }
+    .textPorcent{
+        font-family: var(--fuentePrincipal);
+        color: var(--white);
+        font-size: 5.5rem;
+        justify-content: center;
+        padding-left: 3.5rem;
+    }
+    .textAdict{
+        font-family: var(--fuenteSecundaria);
+        color: var(--white);
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: -4rem;
+        width: 18rem;
+        padding-left: 2rem;
+    }
 
 }
 
@@ -673,6 +689,17 @@ input{
     }
     .back-article-slytherin{
         top: -128rem;
+    }
+    .textPorcent{
+        font-size: 10rem;
+        margin-top: 3rem;
+        padding-left: 5.5rem;
+    }
+    .textAdict{
+        font-size: 3rem;
+        margin-top: -8rem;
+        width: 33rem;
+        padding-left: -3rem;
     }
 
 }
@@ -717,6 +744,14 @@ input{
         top: -51rem;
         left: 12rem;
     }
+    .textPorcent{
+        font-size: 8rem;
+    }
+    .textAdict{
+        font-size: 2.5rem;
+        margin-top: -6rem;
+        width: 28rem;
+    }
 
 }
 
@@ -750,6 +785,17 @@ input{
     .back-article-slytherin{
         top: -71rem;
         left: 12rem;
+    }
+    .textPorcent{
+        font-size: 11rem;
+        padding-left: 6.5rem;
+    }
+    .textAdict{
+        font-size: 3rem;
+        margin-top: 0;
+        width: 36rem;
+        padding-left: 4rem;
+        margin-top: -8rem;
     }
 
 }
@@ -796,6 +842,14 @@ input{
     .back-article-slytherin{
         top: -30rem;
         left: 7rem;
+    }
+    .textPorcent{
+        padding-left: 5.5rem;
+    }
+    .textAdict{
+        width: 36rem;
+        padding-left: 2rem;
+        margin-top: -8rem;
     }
 
 }
