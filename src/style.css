@@ -491,14 +491,22 @@ input{
         max-width: 20rem;
         position: relative;
         top: 0;
+        
     }
+    
     .houses{
         height: 20rem;
         border-radius: 20px;
     }
+    .hufflepuff-article:hover, .ravenclaw-article:hover, .gryffindor-article:hover, .slytherin-article:hover{
+        opacity: 0;
+    }
     .hufflepuff-article, .ravenclaw-article, .gryffindor-article, .slytherin-article{
         padding-left: 7rem;
+        z-index: 2;
+        transition: 0.3s;
     }
+    
     .ravenclaw-article{
         top: 3rem;
     }
@@ -508,12 +516,16 @@ input{
     .slytherin-article{
         top: 9rem;
     }
+     /*PARTE TRASERA DE LAS TARJETAS */
+
     .back-article-hufflepuff, .back-article-ravenclaw, .back-article-gryffindor, .back-article-slytherin{
         left: 7rem;
         height: 20rem;
         width: 20rem; 
         border-radius: 20px;
+        z-index: 1;
     }
+    
     .back-article-hufflepuff{
         background-color: var(--cardHufflepuff);
         top: -80rem;
@@ -539,6 +551,7 @@ input{
         max-height: 35rem;
         max-width: 35rem;
         padding-top: 3rem;
+       
     }
     .houses{
         height: 35rem;
@@ -552,6 +565,7 @@ input{
     .slytherin-article{
         top: 9rem;
     }
+     /*PARTE TRASERA DE LAS TARJETAS */
     .back-article-hufflepuff, .back-article-ravenclaw, .back-article-gryffindor, .back-article-slytherin{
         height: 35rem;
         width: 35rem;
@@ -576,6 +590,7 @@ input{
     article{
         max-height: 30rem;
         max-width: 30rem;
+       
     }
     .houses{
         height: 30rem;
@@ -591,6 +606,7 @@ input{
         left: 5rem;
         top: 6rem;
     }
+     /*PARTE TRASERA DE LAS TARJETAS */
     .back-article-hufflepuff, .back-article-ravenclaw, .back-article-gryffindor, .back-article-slytherin{
         height: 30rem;
         width: 30rem;
@@ -618,10 +634,12 @@ input{
         max-height: 40rem;
         max-width: 40rem;
         right: 4rem;
+      
     }
     .houses{
         height: 40rem;
     }
+     /*PARTE TRASERA DE LAS TARJETAS */
     .back-article-hufflepuff, .back-article-ravenclaw, .back-article-gryffindor, .back-article-slytherin{
         height: 40rem;
         width: 40rem;
@@ -650,6 +668,7 @@ input{
         max-height: 38rem;
         max-width: 38rem;
         right: 4rem;
+       
     }
     .houses{
         height: 38rem;
@@ -665,6 +684,7 @@ input{
         left: 38rem;
         top: 5rem;
     }
+     /*PARTE TRASERA DE LAS TARJETAS */
     .back-article-hufflepuff, .back-article-ravenclaw, .back-article-gryffindor, .back-article-slytherin{
         height: 38rem;
         width: 38rem;
@@ -694,6 +714,7 @@ input{
         max-height: 38rem;
         max-width: 38rem;
         right: 4rem;
+       
     }
     .houses{
         height: 38rem;
@@ -709,6 +730,7 @@ input{
         left: 8rem;
         top: 0;
     }
+     /*PARTE TRASERA DE LAS TARJETAS */
     .back-article-hufflepuff, .back-article-ravenclaw, .back-article-gryffindor, .back-article-slytherin{
         height: 38rem;
         width: 38rem;
