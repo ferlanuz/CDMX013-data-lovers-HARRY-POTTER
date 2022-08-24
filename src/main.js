@@ -121,11 +121,11 @@ btnHousesPorcent.addEventListener('click', function () {
         imgDomHufflepuff.alt = 'hufflepuff.jpeg'
     const imgDomRavenclaw = document.createElement('img');
         imgDomRavenclaw.classList.add('houses');
-        imgDomRavenclaw.src = "./img/_(4).jpeg";
+        imgDomRavenclaw.src = "./img/ravenclaw-house.jpeg";
         imgDomRavenclaw.alt = 'ravenclaw.jpeg';
     const imgDomGryffindor = document.createElement('img');
         imgDomGryffindor.classList.add('houses');
-        imgDomGryffindor.src = "./img/_(5).jpeg";
+        imgDomGryffindor.src = "./img/gryffindor-house.jpeg";
         imgDomGryffindor.alt = 'gryffindor.jpeg'
     const imgDomSlytherin = document.createElement('img');
         imgDomSlytherin.classList.add('houses');
