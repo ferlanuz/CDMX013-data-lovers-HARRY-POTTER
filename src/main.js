@@ -99,7 +99,7 @@ btnHousesPorcent.addEventListener('click', function () {
     
     const totalHufflepuff = resultReduce['Hufflepuff'] + resultReduce['Hufflepuff (possibly)'] + resultReduce['Hufflepuff (likely)'];
     const porcentHufflepuff = ((100 * totalHufflepuff) / 707).toFixed(2);
-console.log(totalGryffindor, totalSlytherin, totalRavenclaw, totalHufflepuff)
+
     //Creamos las tarjetas en el dom para imprimirlas
     //Elegimos el elemento donde van a ser insertadas
     const section = document.querySelector('section');
@@ -121,11 +121,11 @@ console.log(totalGryffindor, totalSlytherin, totalRavenclaw, totalHufflepuff)
         imgDomHufflepuff.alt = 'hufflepuff.jpeg'
     const imgDomRavenclaw = document.createElement('img');
         imgDomRavenclaw.classList.add('houses');
-        imgDomRavenclaw.src = "./img/_ (4).jpeg";
+        imgDomRavenclaw.src = "./img/_(4).jpeg";
         imgDomRavenclaw.alt = 'ravenclaw.jpeg';
     const imgDomGryffindor = document.createElement('img');
         imgDomGryffindor.classList.add('houses');
-        imgDomGryffindor.src = "./img/_ (5).jpeg";
+        imgDomGryffindor.src = "./img/_(5).jpeg";
         imgDomGryffindor.alt = 'gryffindor.jpeg'
     const imgDomSlytherin = document.createElement('img');
         imgDomSlytherin.classList.add('houses');
