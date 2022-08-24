@@ -23,8 +23,19 @@ const functions = {
         return false
       }
     })
+  },
+
+  //Función de contar por casas REDUCE
+  reduceHouses: (data) => {
+    return data.reduce( function(acum, house) {
+      if(acum[house]) {
+        acum[house] = acum[house] + 1;
+      } else{
+        acum[house] = 1;
+      }
+      return acum;
+    }, [])
   }
-  
 }
 
 
