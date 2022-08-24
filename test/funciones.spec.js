@@ -1,3 +1,4 @@
+import { describe, it } from "eslint/lib/rule-tester/rule-tester";
 import functions from "../src/funciones.js";
 
 
@@ -29,4 +30,14 @@ describe('functions.filterNames', () => {
   it('returns "Albus Dumbledore" for "Zacharias Smith, Xenophilius Lovegood, Zoo director, Albus Dumbledore"', () => {
     expect(functions.filterNames([{name: "Zacharias Smith"}, {name: "Xenophilius Lovegood"}, {name: "Albus Dumbledore"}, {name: "Zoo director"}],"Albus Dumbledore")).toStrictEqual([{name: "Albus Dumbledore"}]);
   });
-})
+});
+
+describe('functions.reduceHouses', () => {
+  it('is a function', () => {
+    expect(typeof functions.reduceHouses).toBe('function');
+  });
+
+  it('')
+
+  
+});
